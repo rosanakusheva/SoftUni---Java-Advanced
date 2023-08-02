@@ -41,7 +41,7 @@
       <recent name="D:\Rosanka\JAVA ADVANCED\SoftUni---Java-Advanced\MODULE1" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DecimalToBinary">
     <configuration name="BrowserHistory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="StacksAndQueues.LAB.BrowserHistory" />
       <module name="MODULE1" />
@@ -55,8 +55,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DecimalToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StacksAndQueues.LAB.DecimalToBinary" />
+      <module name="MODULE1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="StacksAndQueues.LAB.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DecimalToBinary" />
         <item itemvalue="Application.BrowserHistory" />
       </list>
     </recent_temporary>
