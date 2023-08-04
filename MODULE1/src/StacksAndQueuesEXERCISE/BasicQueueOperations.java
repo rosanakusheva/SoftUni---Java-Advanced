@@ -14,7 +14,7 @@ public class BasicQueueOperations {
         ArrayDeque<Integer> queue = new ArrayDeque<>();
 
         for (int i = 1; i <= n; i++) {
-            queue.add(scanner.nextInt());
+            queue.add(scanner.nextInt());//.offer
         }
 
         for (int i = 1; i <= s; i++) {
