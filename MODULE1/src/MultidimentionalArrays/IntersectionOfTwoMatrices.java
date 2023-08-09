@@ -16,9 +16,7 @@ public class IntersectionOfTwoMatrices {
                 firstMatrix[r][c] = arr[c].charAt(0);
             }
         }
-
-//       rows = Integer.parseInt(scanner.nextLine());
-//        cols = Integer.parseInt(scanner.nextLine());
+        
 
         char[][] secondMatrix = new char[rows][cols];
         for (int r = 0; r < rows; r++) {
