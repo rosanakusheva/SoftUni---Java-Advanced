@@ -1,6 +1,5 @@
-package MultidimentionalArrays;
+package MultidimentionalArraysLAB;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CompareMatrices {

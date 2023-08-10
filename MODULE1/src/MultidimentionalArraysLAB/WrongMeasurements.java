@@ -1,4 +1,4 @@
-package MultidimentionalArrays;
+package MultidimentionalArraysLAB;
 
 import java.util.ArrayList;
 import java.util.Arrays;

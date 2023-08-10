@@ -1,6 +1,5 @@
-package MultidimentionalArrays;
+package MultidimentionalArraysLAB;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class IntersectionOfTwoMatrices {
@@ -16,7 +15,7 @@ public class IntersectionOfTwoMatrices {
                 firstMatrix[r][c] = arr[c].charAt(0);
             }
         }
-        
+
 
         char[][] secondMatrix = new char[rows][cols];
         for (int r = 0; r < rows; r++) {
