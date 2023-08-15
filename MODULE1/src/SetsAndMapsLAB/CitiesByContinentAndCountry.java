@@ -36,5 +36,14 @@ public class CitiesByContinentAndCountry {
                                 System.out.println(" " + innerEntry.getKey() + " -> " + cities);
                             } );
                 });
+
+//        continents.forEach((key, value) -> {
+//            System.out.println(key + ":");
+//            value.entrySet().stream()
+//                    .forEach(innerEntry -> {
+//                        String cities = String.join(", ", innerEntry.getValue());
+//                        System.out.println(" " + innerEntry.getKey() + " -> " + cities);
+//                    });
+//        });
     }
 }
