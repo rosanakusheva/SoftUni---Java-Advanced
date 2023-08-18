@@ -21,5 +21,16 @@ public class FixEmails {
             name = scanner.nextLine();
         }
         emailsData.entrySet().forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
+
+//        while (!name.equals("stop")) {
+//            String email = scanner.nextLine();
+//            emailsData.put(name, email);
+//
+//            name = scanner.nextLine();
+//        }
+//        emailsData.entrySet().removeIf(entry -> entry.getValue().endsWith("uk") || entry.getValue()
+//                .endsWith("us") || entry.getValue().endsWith("com"));
+//
+//        emailsData.entrySet().forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
     }
 }
