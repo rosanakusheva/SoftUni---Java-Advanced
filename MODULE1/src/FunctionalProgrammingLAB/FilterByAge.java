@@ -48,6 +48,6 @@ public class FilterByAge {
                 .stream()
                 .filter(person -> filterPredicate.test(person.getValue(), ageLimit))
                 .forEach(printConsumer);
-        
+
     }
 }
