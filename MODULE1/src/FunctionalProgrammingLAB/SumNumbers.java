@@ -24,8 +24,5 @@ public class SumNumbers {
         System.out.println("Sum = " + sum);
 
 
-
-
-
     }
 }
