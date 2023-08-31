@@ -20,5 +20,6 @@ public class ConsumerPrint {
 //                System.out.println(name);
 //            }
 //        };
+//        printArray.accept(names);
     }
 }
