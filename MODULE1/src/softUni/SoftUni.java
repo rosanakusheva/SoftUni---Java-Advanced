@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SoftUni {
     private int capacity;
-    private List<Student> data;
+    private List<softUni.Student> data;
 
     public SoftUni(int capacity) {
         this.capacity = capacity;
@@ -20,7 +20,7 @@ public class SoftUni {
         return this.data.size();
     }
 
-    public String insert(Student student) {
+    public String insert(softUni.Student student) {
         if (getCount() + 1 > this.capacity) {
             return "The hall is full.";
         } else {
@@ -34,7 +34,7 @@ public class SoftUni {
         }
     }
 
-    public String remove(Student student) {
+    public String remove(softUni.Student student) {
         if (this.data.contains(student)) {
             this.data.remove(student);
             return String.format("Removed student %s %s.", student.getFirstName(), student.getLastName());
@@ -43,8 +43,8 @@ public class SoftUni {
         }
     }
 
-    public Student getStudent(String firstName, String lastName) {
-        for (Student student : this.data) {
+    public softUni.Student getStudent(String firstName, String lastName) {
+        for (softUni.Student student : this.data) {
             if (student.getFirstName().equals(firstName) && student.getLastName().equals(lastName)) {
                 return student;
             }
