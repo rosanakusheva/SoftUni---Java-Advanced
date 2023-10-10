@@ -24,7 +24,7 @@
             int bouquets = 0;
             int leftFlowers = 0;
 
-            while (!tulips.isEmpty() && daffodils.isEmpty()) {
+            while (!tulips.isEmpty() && !daffodils.isEmpty()) {
                 int tulip = tulips.peek();
                 int daffodil = daffodils.peek();
 
