@@ -1,65 +1,66 @@
-package workingWithAbstraction.jediGalaxy;
+package jediGalaxy;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-            int[] dimestions = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            int x = dimestions[0];
-            int y = dimestions[1];
+        int[] dimensions = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+        int rows = dimensions[0];
+        int cols = dimensions[1];
 
-            int[][] matrix = new int[x][y];
+        int[][] matrix = new int[rows][cols];
 
-            int value = 0;
-            for (int i = 0; i < x; i++)
-            {
-                for (int j = 0; j < y; j++)
-                {
-                    matrix[i][j] = value++;
-                }
+        int value = 0;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix[i][j] = value++;
             }
+        }
 
-            String command = scanner.nextLine();
-            long sum = 0;
-            while (!command.equals("Let the Force be with you"))
-            {
-                int[] ivoS = Arrays.stream(command.split(" ")).mapToInt(Integer::parseInt).toArray();
-                int[] evil = Arrays.stream(scanner.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-                int xE = evil[0];
-                int yE = evil[1];
+        String command = scanner.nextLine();
+        long sum = 0;
+        while (!command.equals("Let the Force be with you")) {
+            int[] heroCoordinates = Arrays.stream(command.split("\\s+")).mapToInt(Integer::parseInt).toArray();
+            int[] evilCoordinates = Arrays.stream(scanner.nextLine().split("\\s+")).mapToInt(Integer::parseInt).toArray();
+            int evilRow = evilCoordinates[0];
+            int evilCol = evilCoordinates[1];
 
-                while (xE >= 0 && yE >= 0)
-                {
-                    if (xE >= 0 && xE < matrix.length && yE >= 0 && yE < matrix[0].length)
-                    {
-                        matrix[xE] [yE] = 0;
-                    }
-                    xE--;
-                    yE--;
-                }
+            moveEvil(matrix, evilRow, evilCol);
 
-                int xI = ivoS[0];
-                int yI = ivoS[1];
+            int heroRow = heroCoordinates[0];
+            int heroCol = heroCoordinates[1];
 
-                while (xI >= 0 && yI < matrix[1].length)
-                {
-                    if (xI >= 0 && xI < matrix.length && yI >= 0 && yI < matrix[0].length)
-                    {
-                        sum += matrix[xI][yI];
-                    }
+            sum += moveHero(matrix, heroRow, heroCol, sum);
 
-                    yI++;
-                    xI--;
-                }
-
-                command = scanner.nextLine();
-            }
+            command = scanner.nextLine();
+        }
 
         System.out.println(sum);
 
+    }
 
+    private static void moveEvil(int[][] matrix, int row, int col) {
+        while (row >= 0 && col >= 0) {
+            if (row < matrix.length && col < matrix[0].length) {
+                matrix[row][col] = 0;
+            }
+            row--;
+            col--;
+        }
+    }
+
+    private static long moveHero(int[][] matrix, int row, int col, long sum) {
+        while (row >= 0 && col < matrix[1].length) {
+            if (row < matrix.length && col >= 0 && col < matrix[0].length) {
+                sum += matrix[row][col];
+            }
+            row--;
+            col++;
+        }
+        return sum;
     }
 }
