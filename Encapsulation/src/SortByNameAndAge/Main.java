@@ -10,6 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int numberOfPeople = Integer.parseInt(scanner.nextLine());
         List<Person> people = new ArrayList<>();
+        Team team = new Team("Black Eagles");
 
         for (int i = 0; i < numberOfPeople; i++) {
             String[] input = scanner.nextLine().split("\\s+");
@@ -18,7 +19,10 @@ public class Main {
             int age = Integer.parseInt(input[2]);
             double salary = Double.parseDouble(scanner.nextLine());
             people.add(new Person(firstName, lastName, age, salary));
+            team.addPlayer(new Person(firstName, lastName, age, salary));
         }
+        System.out.printf("First team have %d players%n", team.getFirstTeam().size());
+        System.out.printf("Reserve team have %d players%n", team.getReserveTeam().size());
 
 //        Collections.sort(people, (firstPerson, secondPerson) -> {
 //            int comparisonResult = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
@@ -34,11 +38,11 @@ public class Main {
 //                return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
 //            }
 //        });
-        double bonus = Double.parseDouble(scanner.nextLine());
-        for (Person person : people) {
-            person.increaseSalary(bonus);
-            System.out.println(person.toString());
-        }
+//        double bonus = Double.parseDouble(scanner.nextLine());
+//        for (Person person : people) {
+//            person.increaseSalary(bonus);
+//            System.out.println(person.toString());
+//        }
 
     }
 }
