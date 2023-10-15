@@ -16,25 +16,27 @@ public class Main {
             String firstName = input[0];
             String lastName = input[1];
             int age = Integer.parseInt(input[2]);
-            people.add(new Person(firstName, lastName, age));
+            double salary = Double.parseDouble(scanner.nextLine());
+            people.add(new Person(firstName, lastName, age, salary));
         }
 
-        Collections.sort(people, (firstPerson, secondPerson) -> {
-            int comparisonResult = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
-
-//            if (comparisonResult == 0){
-//                comparisonResult = Integer.compare(firstPerson.getAge(), secondPerson.getAge());
+//        Collections.sort(people, (firstPerson, secondPerson) -> {
+//            int comparisonResult = firstPerson.getFirstName().compareTo(secondPerson.getFirstName());
+//
+////            if (comparisonResult == 0){
+////                comparisonResult = Integer.compare(firstPerson.getAge(), secondPerson.getAge());
+////            }
+////            return comparisonResult;
+//
+//            if (comparisonResult != 0) {
+//                return comparisonResult;
+//            } else {
+//                return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
 //            }
-//            return comparisonResult;
-
-            if (comparisonResult != 0) {
-                return comparisonResult;
-            } else {
-                return Integer.compare(firstPerson.getAge(), secondPerson.getAge());
-            }
-        });
-
+//        });
+        double bonus = Double.parseDouble(scanner.nextLine());
         for (Person person : people) {
+            person.increaseSalary(bonus);
             System.out.println(person.toString());
         }
 
