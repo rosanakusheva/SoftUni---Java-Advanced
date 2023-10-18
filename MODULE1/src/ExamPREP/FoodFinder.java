@@ -36,6 +36,9 @@ public class FoodFinder {
                 if (currentWord.contains(consonant)) {
                     int index = currentWord.indexOf(consonant);
                     emptyWord = emptyWord.substring(0, index) + consonant + emptyWord.substring(index + 1);
+//                    StringBuilder sb = new StringBuilder(emptyWord);
+//                    sb.setCharAt(index, vowel.charAt(0));
+//                    emptyWord = sb.toString();
                     foundWords.set(i, emptyWord);
                 }
 
