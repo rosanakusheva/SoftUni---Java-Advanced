@@ -23,14 +23,14 @@ public class CookingJourney {
                 pastryShop[row][col] = input[col];
 
                 if (pastryShop[row][col].equals("S")) {
-                    firstPillarRow = row;
-                    firstPillarCol = col;
+                    currentRow = row;
+                    currentCol = col;
 
                 }
 
                 if (pastryShop[row][col].equals("P") && !foundFirstPillar) {
-                    currentRow = row;
-                    currentCol = col;
+                    firstPillarRow = row;
+                    firstPillarRow = col;
                     foundFirstPillar = true;
                 }
 
