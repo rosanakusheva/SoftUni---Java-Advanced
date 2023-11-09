@@ -18,7 +18,7 @@ public class Main {
                 .filter(field -> !Modifier.isPrivate(field.getModifiers()))
                 .forEach(System.out::println);
 
-        
+
         Class clazz = Reflection.class;
         Method[] AllMethods = clazz.getDeclaredMethods();
         for (Method method : AllMethods) {
