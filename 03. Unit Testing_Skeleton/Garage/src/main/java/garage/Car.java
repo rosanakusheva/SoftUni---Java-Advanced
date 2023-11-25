@@ -1,4 +1,4 @@
-package garage;
+package main.java.garage;
 
 public class Car {
     private String brand;

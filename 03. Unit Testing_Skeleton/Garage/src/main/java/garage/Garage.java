@@ -1,4 +1,4 @@
-package garage;
+package main.java.garage;
 
 import java.util.ArrayList;
 import java.util.Collections;
